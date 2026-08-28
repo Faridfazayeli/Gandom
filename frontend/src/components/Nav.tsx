@@ -1,0 +1,1 @@
+export default function Nav({onLogin}:{onLogin:()=>void}){return <header><div className="brand">گندم</div><nav><button onClick={()=>location.hash='technicians'}>تعمیرکاران</button><button onClick={()=>location.hash='general'}>کاربر عمومی</button></nav><button className="primary" onClick={onLogin}>ورود / ثبت‌نام</button></header>}

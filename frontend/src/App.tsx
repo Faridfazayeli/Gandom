@@ -1,0 +1,2 @@
+import{useState}from'react';import Nav from'./components/Nav';import Home from'./pages/Home';import Technicians from'./pages/Technicians';import Login from'./pages/Login';import'./style.css';
+export default function App(){const[login,setLogin]=useState(false);const[page,setPage]=useState(location.hash);window.onhashchange=()=>setPage(location.hash);return <><Nav onLogin={()=>setLogin(true)}/>{page==='#technicians'?<Technicians onMessage={()=>setLogin(true)}/>:<Home/>}{login&&<Login close={()=>setLogin(false)}/>}<footer>گندم · بازار هوشمند خدمات تعمیرات</footer></>}

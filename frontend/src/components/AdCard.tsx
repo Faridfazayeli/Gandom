@@ -1,0 +1,1 @@
+export default function AdCard({ad}:any){return <article className="card ad"><span className="badge">تبلیغ فعال</span><h3>{ad.title}</h3><p>{ad.description}</p><div className="meta">{ad.category} · {ad.city}</div><small>اعتبار تا: {ad.ends_at?new Date(ad.ends_at).toLocaleString('fa-IR'):'-'}</small></article>}
